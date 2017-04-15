@@ -8,10 +8,13 @@ Pod::Spec.new do |s|
   s.homepage     = 'https://github.com/ibireme/YYImage'
   s.platform     = :ios, '6.0'
   s.ios.deployment_target = '6.0'
-  s.source       = { :git => 'https://github.com/ibireme/YYImage.git', :tag => s.version.to_s }
+  s.source       = { :git => 'https://github.com/iCrany/YYImage.git', :tag => s.version.to_s }
   
   s.requires_arc = true
   s.default_subspec = 'Core'
+
+  s.vendored_frameworks = "Carthage/Build/iOS/YYImage.framework"
+  s.prepare_command = "/user/bin/ruby build_framework.rb"
   
   s.subspec 'Core' do |core|
     core.source_files = 'YYImage/*.{h,m}'
