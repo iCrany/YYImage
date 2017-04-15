@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.default_subspec = 'Core'
 
   s.vendored_frameworks = "Carthage/Build/iOS/YYImage.framework"
-  s.prepare_command = "/user/bin/ruby build_framework.rb"
+  s.prepare_command = "/usr/bin/ruby build_framework.rb"
   
   s.subspec 'Core' do |core|
     core.source_files = 'YYImage/*.{h,m}'
