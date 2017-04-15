@@ -1,5 +1,7 @@
-p "Create a new Cartfile
-File.write("Cartfile", 'github "iCrany/YYImage"')
-p "carthage update"
+#!/usr/bin/env ruby
+
+puts "Create a new Cartfile"
+File.write("Cartfile",'github "iCrany/YYImage"')
+puts "carthage update"
 `carthage update`#安装编译
-p "carthage update finish"
+puts "carthage update finish"
